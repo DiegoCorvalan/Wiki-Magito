@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Maguito Ascendido</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=8" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%2307110c' width='16' height='16'/%3E%3Crect fill='%23b6f7cf' x='2' y='2' width='12' height='12'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div id="app">
+      <p class="booting">LEYENDO ARCHIVO…</p>
+    </div>
+    <footer id="shell">
+      <div id="log" aria-live="polite"></div>
+      <form id="shell-form">
+        <label class="prompt-line">
+          <span id="prompt">guest@ascendido:~$</span>
+          <input id="cmd" autocomplete="off" spellcheck="false" aria-label="Comando" />
+        </label>
+      </form>
+    </footer>
+    <script type="module" src="/app.js?v=8"></script>
+  </body>
+</html>
