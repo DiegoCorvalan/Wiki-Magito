@@ -2,8 +2,6 @@
 id: 0b93d37f-0ba7-4afb-943c-723eea5e32b1
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:48:17.93595+00:00'
-updated: '2026-11-05T22:37:05.931+00:00'
 ---
 
 # Edna
@@ -30,7 +28,12 @@ Edna es una exitosa modista que revoluciono la industria. Un dia recivio una inv
 
 Asi fue como Edna comenzo a mejorar su capcidades mientras se mantenia lo mas oculta posible de Bowarts (Aunque llendo algunos festivales de moda).
 
+En Buenas peras es contratada por Doc Sciencie para rescatar a los miembros de su equipo de la dimension 7, se entera de que uno de los miembros es de Bowarts. Luego de aventurarse encuentran su cadaver y en el una extraña llave de Bowarts. Mark combate y acaba con otro de los miembros del equipo y lo noquean. Al volver se desvubre que Watcher era una traidora y logran noquearla junto con Mark pero este logra matar al ultimo miembro de los rescatados.
+Edna decide abandonar el lugar cansada de todo el conflicto.
+
 ## Relaciones
+
+Mark: No confia mucho en el pero como lo encuentra capaz esta dispuesta a trabajar con el.
 
 
 ## Esferas

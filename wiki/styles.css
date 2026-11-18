@@ -513,15 +513,6 @@ option { background: var(--bg); }
   background: var(--mint);
 }
 
-.meta-line {
-  margin-top: 22px;
-  color: var(--text-dim);
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .radar {
   width: min(100%, 440px);
   height: auto;

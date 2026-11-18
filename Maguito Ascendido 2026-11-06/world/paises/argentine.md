@@ -2,8 +2,6 @@
 id: f143b0c4-013c-4c8f-9a09-7edcd29f51e3
 type: 'card'
 entityType: 'Government'
-created: '2026-11-03T17:13:47.49242+00:00'
-updated: '2026-11-06T14:07:17.929+00:00'
 ---
 
 # Argentine

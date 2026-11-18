@@ -2,8 +2,6 @@
 id: 6806ede0-f3cd-43f1-a79a-86fe74effb87
 type: 'card'
 entityType: 'Organization'
-created: '2026-11-04T00:30:34.086528+00:00'
-updated: '2026-11-05T23:57:21.563+00:00'
 ---
 
 # Eutanatos

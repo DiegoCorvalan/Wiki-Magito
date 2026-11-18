@@ -2,8 +2,6 @@
 id: 0b93d37f-0ba7-4afb-943c-723eea5e32b1
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:48:17.93595+00:00'
-updated: '2026-11-05T22:37:05.931+00:00'
 ---
 
 # Valentie

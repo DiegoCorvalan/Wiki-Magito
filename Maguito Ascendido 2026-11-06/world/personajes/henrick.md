@@ -2,8 +2,6 @@
 id: 84ff4127-9f12-41d9-9c3d-e62366579bd4
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:48:01.559092+00:00'
-updated: '2026-11-05T22:30:02.851+00:00'
 ---
 
 # Henrick

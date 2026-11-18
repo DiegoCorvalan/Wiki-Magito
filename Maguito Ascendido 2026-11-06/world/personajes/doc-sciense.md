@@ -2,8 +2,6 @@
 id: 700144f5-91bc-4261-918c-6b3731d73e83
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T16:25:42.601204+00:00'
-updated: '2026-11-05T22:31:51.131+00:00'
 ---
 
 # Doc Sciense
@@ -40,11 +38,11 @@ El ser
 
 [Watcher](../../world/personajes/watcher.md): La asistente del doctor, fundamental en la creación de sus instrumentos, se descubrió que era una espía la cual vendía los planos del doc por dinero.
 
-[Henrick](../../world/personajes/henrick.md)
+[Henrick](../../world/personajes/henrick.md): Estudiante que vino a ver al doc, parecia tener mayores conocimeintos de lo que dejeba ver.
 
-[Naj](../../world/personajes/naj.md)
+[Naj](../../world/personajes/naj.md): Estudiante recientemente despertado, el doc lo tomo como pupilo.
 
-[Valentie](../../world/personajes/valentie.md)
+[Valentie](../../world/personajes/valentie.md): Estudiante con mucho potencial, el doc la busco para que se una.
 
 ## Esferas
 
@@ -63,6 +61,8 @@ El ser
 Todo esta interconectado y puede ser utilizado para potenciarse.
 
 La capacidad de potenciar algo a llevado a Doc Sciense a ser capas de crear Maravillas únicas.
+
+## Hechizos
 
 Gun of Icarus: Dispara un rayo de energía que ocupa Quintaesencia o Taz.
 

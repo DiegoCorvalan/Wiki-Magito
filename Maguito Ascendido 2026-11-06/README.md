@@ -16,4 +16,6 @@
 Nothing here needs vvd to open except the last one. Your writing is yours,
 in a format that will outlive us.
 
-node --check "c:\Users\Gamer\Documents\Wiki Magito\wiki\server.js"; node --check "c:\Users\Gamer\Documents\Wiki Magito\wiki\app.js"; node "c:\Users\Gamer\Documents\Wiki Magito\wiki\server.js"
+node --check "c:\Users\Gamer\Documents\Wiki-Magito\wiki\server.js"; node --check "c:\Users\Gamer\Documents\Wiki-Magito\wiki\app.js"; node "c:\Users\Gamer\Documents\Wiki-Magito\wiki\server.js"
+
+C:\Users\Gamer\Documents\Wiki-Magito\M

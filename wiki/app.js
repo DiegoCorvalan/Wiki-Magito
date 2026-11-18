@@ -51,7 +51,6 @@ const SPHERE_MAX = 4;
 const state = {
   docs: [],
   route: parseRoute(),
-  sort: "name",
   view: "cards",
   log: [],
 };
@@ -81,7 +80,6 @@ document.addEventListener("submit", (event) => {
 document.addEventListener("change", (event) => {
   const target = event.target;
   if (!(target instanceof HTMLSelectElement)) return;
-  if (target.id === "sort") state.sort = target.value;
   if (target.id === "category") {
     const value = target.value;
     location.hash = value === "all" ? "#/archive" : `#/archive/${value}`;
@@ -136,7 +134,7 @@ async function boot() {
       .filter((doc) => doc.title && doc.fm.type !== "atlas" && doc.fm.type !== "timeline" && doc.fm.type !== "radar-chart");
     const visible = state.docs.filter((doc) => !doc.supplement);
     pushLog(`${visible.length} fichas en el archivo.`);
-    pushLog("Escribí <span class=\"cmd\">help</span>.");
+    pushLog("Escribe <span class=\"cmd\">help</span>.");
     render();
   } catch {
     app.innerHTML = `<p class="error">No pude leer el archivo. Abrí esta página desde node wiki/server.js.</p>`;
@@ -181,7 +179,6 @@ function parseDoc(entry) {
     quote: "",
     preamble: [],
     sections: [],
-    updated: fm.updated || "",
     supplement: fm.type === "radar-chart",
     fm,
   };
@@ -273,13 +270,7 @@ function docsIn(category) {
 }
 
 function sortDocs(list) {
-  const copy = [...list];
-  if (state.sort === "updated") {
-    copy.sort((a, b) => String(b.updated).localeCompare(String(a.updated)));
-  } else {
-    copy.sort((a, b) => a.title.localeCompare(b.title, "es"));
-  }
-  return copy;
+  return [...list].sort((a, b) => a.title.localeCompare(b.title, "es"));
 }
 
 function counts() {
@@ -373,12 +364,6 @@ function renderArchive(category) {
     <h1 class="list-title"><span>${esc(title)}</span><span class="dim">${String(docs.length).padStart(2, "0")} fichas</span></h1>
     <div class="toolbar">
       <label>Category<select id="category">${options}</select></label>
-      <label>Sort
-        <select id="sort">
-          <option value="name"${state.sort === "name" ? " selected" : ""}>Nombre A–Z</option>
-          <option value="updated"${state.sort === "updated" ? " selected" : ""}>Ultima actualizacion</option>
-        </select>
-      </label>
       <div class="view-toggle">
         <button type="button" data-view="cards" aria-pressed="${state.view === "cards"}">Cartas</button>
         <button type="button" data-view="list" aria-pressed="${state.view === "list"}">Lista</button>
@@ -432,7 +417,6 @@ function renderDoc(doc) {
   const stub = doc.supplement || (doc.category === "relations" && !doc.sections.length)
     ? `<div class="stub"><p>Este gráfico está guardado en Maguito Ascendido.vvd. El Markdown no trae los valores.</p></div>`
     : "";
-  const updated = doc.updated ? `<p class="meta-line">Actualizado ${esc(doc.updated.slice(0, 10))}</p>` : "";
   return `
     ${crumbs([["#/", SITE.name], ["#/archive", "TODAS LAS FICHAS"], ["", doc.title]])}
     ${banner}
@@ -441,8 +425,7 @@ function renderDoc(doc) {
     <div class="prose">${preamble}</div>
     ${stub}
     ${sections}
-    ${spheres}
-    ${updated}`;
+    ${spheres}`;
 }
 
 function renderSection(doc, section) {

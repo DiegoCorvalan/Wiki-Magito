@@ -2,8 +2,6 @@
 id: 98f1e66b-ba1d-4a71-8ed6-205ff31dde5e
 type: 'card'
 entityType: 'Corporation'
-created: '2026-11-05T02:43:40.438219+00:00'
-updated: '2026-11-05T23:55:26.044+00:00'
 ---
 
 # Bowarts

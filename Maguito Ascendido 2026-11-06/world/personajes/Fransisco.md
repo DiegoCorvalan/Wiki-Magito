@@ -2,8 +2,6 @@
 id: 0b93d37f-0ba7-4afb-943c-723eea5e32b1
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:48:17.93595+00:00'
-updated: '2026-11-05T22:37:05.931+00:00'
 ---
 
 # Fransisco
@@ -12,7 +10,7 @@ updated: '2026-11-05T22:37:05.931+00:00'
 
 **Nacio el:** ? 
 **Vive en:** Buenas peras, Argentine
-**Nacionalidad:** ?
+**Nacionalidad:** Argentine
 **Status:** Muerto  
 **Ocupacion:** Medico
 **Rango:** Novato  
@@ -28,6 +26,12 @@ Un medico dispuesto a lo que sea por evolucionar y sanar a su hermano.
 
 Fransisco y su hermano son muy unidos. De un momento a otro su hermano se enfermo gravemente, el deseo de Fransisco de sanarlo hizo que despertara. Desde entonces hace lo que sea para mejorar incluso encontrando una maestra.
 
+Fue enviado a la dimension 7 como miembro del equipo de rescate por el doctor Sciencie. Junto con Mark y Edna logran encontrar a los miembros perdidos de la universidad pero Mark logra acabar con una de ellos y debe noquearlo. Al volver se enteran que hay un traidor y al volver de la dimension se pelea con Watcher e intenta salvar la vida de Nat pero es irrumpido por Mark.
+
+Intenta absorver la biomasa de Watcher y termino inconciente sin exito.
+
+Durante la guerra entre los Familia Mangione y los Griffters intenta encontrar el asesino que esta acabando con personas de ambos lados, luego de investigar sigue las pistas hasta el lider de la Familia Mangione. Decide modificar su cuerpo para moler a los mafiosos a golpes pero le terminan baleando en el baño.
+
 ## Relaciones
 
 Hermano
@@ -36,12 +40,12 @@ Hermano
 
 - Correspondencia: 0
 - Entropia: 0
-- Espiritu: 0
+- Espiritu: 1
 - Fuerzas: 0
 - Primordial: 0
 - Materia: 0
 - Mente: 0
-- Tiempo: 1
+- Tiempo: 0
 - Vida: 2
 
 ## Magia

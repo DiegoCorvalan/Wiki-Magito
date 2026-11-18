@@ -2,8 +2,6 @@
 id: 6593f009-ac13-4fc1-b340-dc74aebef071
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:48:14.060415+00:00'
-updated: '2026-11-05T22:29:36.904+00:00'
 ---
 
 # Naj

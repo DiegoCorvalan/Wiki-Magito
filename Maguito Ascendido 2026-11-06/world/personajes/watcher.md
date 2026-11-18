@@ -2,8 +2,6 @@
 id: 661e29d0-42ef-4f75-bc97-fc8df0ef879d
 type: 'card'
 entityType: 'Character'
-created: '2026-11-05T17:47:55.089304+00:00'
-updated: '2026-11-05T22:31:36.202+00:00'
 ---
 
 # Watcher
