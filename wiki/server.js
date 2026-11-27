@@ -69,6 +69,17 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  const exportPrefix = `/${path.basename(EXPORT_ROOT)}/`;
+  if (pathname.startsWith(exportPrefix)) {
+    const file = inside(EXPORT_ROOT, pathname.slice(exportPrefix.length));
+    if (!file) {
+      send(res, 403, "forbidden");
+      return;
+    }
+    sendFile(res, file);
+    return;
+  }
+
   if (pathname.startsWith("/export/")) {
     const file = inside(EXPORT_ROOT, pathname.slice("/export/".length));
     if (!file) {

@@ -19,7 +19,9 @@ for (const name of SITE_FILES) {
 }
 
 const docs = await collectDocs(WORLD_ROOT);
-await fsp.writeFile(path.join(DIST, "docs.json"), JSON.stringify(docs));
+const docsJson = JSON.stringify(docs);
+await fsp.writeFile(path.join(DIST, "docs.json"), docsJson);
+await fsp.writeFile(path.join(__dirname, "docs.json"), docsJson);
 await fsp.writeFile(path.join(DIST, ".nojekyll"), "");
 
 await fsp.cp(EXPORT_ROOT, path.join(DIST, "export"), {

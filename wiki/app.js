@@ -255,7 +255,12 @@ function imageUrl(rel, src) {
     else if (part && part !== ".") parts.push(part);
   }
   if (parts.length === 0) return "";
-  return `export/${parts.map(encodeURIComponent).join("/")}`;
+  const tail = parts.map(encodeURIComponent).join("/");
+  if (/\/wiki(\/|$)/.test(location.pathname)) {
+    const folder = encodeURIComponent("Maguito Ascendido 2026-11-06");
+    return `../${folder}/${tail}`;
+  }
+  return `export/${tail}`;
 }
 
 function visibleDocs() {
