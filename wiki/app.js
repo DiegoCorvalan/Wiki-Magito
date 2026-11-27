@@ -126,7 +126,7 @@ boot();
 
 async function boot() {
   try {
-    const response = await fetch("/api/docs");
+    const response = await fetch("docs.json");
     if (!response.ok) throw new Error(String(response.status));
     const payload = await response.json();
     state.docs = payload
@@ -137,7 +137,7 @@ async function boot() {
     pushLog("Escribe <span class=\"cmd\">help</span>.");
     render();
   } catch {
-    app.innerHTML = `<p class="error">No pude leer el archivo. Abrí esta página desde node wiki/server.js.</p>`;
+    app.innerHTML = `<p class="error">No pude leer el archivo.</p>`;
   }
 }
 
@@ -255,7 +255,7 @@ function imageUrl(rel, src) {
     else if (part && part !== ".") parts.push(part);
   }
   if (parts.length === 0) return "";
-  return `/export/${parts.map(encodeURIComponent).join("/")}`;
+  return `export/${parts.map(encodeURIComponent).join("/")}`;
 }
 
 function visibleDocs() {

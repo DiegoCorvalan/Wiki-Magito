@@ -1,8 +1,8 @@
 import http from "node:http";
 import fs from "node:fs";
-import fsp from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { collectDocs } from "./catalog.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -32,17 +32,6 @@ function inside(root, rel) {
   return full;
 }
 
-async function walk(dir) {
-  const out = [];
-  const entries = await fsp.readdir(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...(await walk(full)));
-    else if (entry.name.endsWith(".md")) out.push(full);
-  }
-  return out;
-}
-
 function send(res, status, body, type = "text/plain; charset=utf-8") {
   res.writeHead(status, {
     "Content-Type": type,
@@ -64,21 +53,14 @@ function sendFile(res, file) {
 }
 
 async function docsPayload() {
-  const files = await walk(WORLD_ROOT);
-  const docs = [];
-  for (const file of files) {
-    const rel = path.relative(WORLD_ROOT, file).split(path.sep).join("/");
-    docs.push({ rel, markdown: await fsp.readFile(file, "utf8") });
-  }
-  docs.sort((a, b) => a.rel.localeCompare(b.rel, "es"));
-  return JSON.stringify(docs);
+  return JSON.stringify(await collectDocs(WORLD_ROOT));
 }
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url || "/", "http://127.0.0.1");
   const pathname = decodeURIComponent(url.pathname);
 
-  if (pathname === "/api/docs") {
+  if (pathname === "/api/docs" || pathname === "/docs.json") {
     try {
       send(res, 200, await docsPayload(), "application/json; charset=utf-8");
     } catch (error) {
